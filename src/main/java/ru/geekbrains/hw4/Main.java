@@ -91,7 +91,7 @@ public class Main {
     private static boolean isCellValid(int rowNumber, int colNumber, boolean isAI) {
 
         if (!isAI && ((rowNumber < 1) || (rowNumber > SIZE) || (colNumber < 1) || (colNumber > SIZE))) {
-            System.out.println("\nПроверьте значения строки и столбца");
+            System.out.println("\nПроверьте значения строки и столбца!");
             return false;
         }
 
@@ -185,7 +185,7 @@ public class Main {
             for (int j = WINSIZE - 1; j < map[i].length; j++) {
                 int winChars = 0;
                 if (map[i][j] == symbol) {
-                    winChars=1;
+                    winChars = 1;
                     for (int k = 1; k < WINSIZE; k++) {
                         if (map[i + k][j - k] == symbol) {
                             winChars++;
